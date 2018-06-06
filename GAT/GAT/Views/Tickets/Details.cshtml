@@ -1,0 +1,106 @@
+﻿@model GAT.Models.Tickets
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tickets</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prioridade.Desc_Prioridade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prioridade.Desc_Prioridade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.Desc_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.Desc_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tecnico.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tecnico.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo.Desc_Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo.Desc_Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Problema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Problema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempoDispendido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempoDispendido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAberturaTicket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAberturaTicket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFechoTicket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataFechoTicket)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

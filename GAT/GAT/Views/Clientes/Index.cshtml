@@ -1,0 +1,69 @@
+﻿@model IEnumerable<GAT.Models.Clientes>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SLA.SLA_Desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Morada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPostal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Localidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telemovel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataAbertura)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLA.SLA_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Morada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPostal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Localidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telemovel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAbertura)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

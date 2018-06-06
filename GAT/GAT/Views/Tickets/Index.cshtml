@@ -1,0 +1,93 @@
+﻿@model IEnumerable<GAT.Models.Tickets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prioridade.Desc_Prioridade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.Desc_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tecnico.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo.Desc_Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Problema)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempoDispendido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataAberturaTicket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFechoTicket)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria.Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prioridade.Desc_Prioridade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.Desc_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tecnico.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo.Desc_Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Problema)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempoDispendido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAberturaTicket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataFechoTicket)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
